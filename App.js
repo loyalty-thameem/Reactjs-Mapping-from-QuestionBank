@@ -22,8 +22,8 @@ export default function App() {
 const dataElement = data.map((data,index)=>{
     return  <Card 
                 img={data.coverImg}
-                rating={data.rating}
-                reviewCount={data.reviewCount}
+                rating={data.stats.rating}
+                reviewCount={data.stats.reviewCount}
                 location={data.location}
                 title={data.title}
                 price={data.price}
@@ -34,6 +34,6 @@ console.log(dataElement)
         <div>
             <Navbar />
            {dataElement}
-        </div>
+        </div>  
     )
 }
